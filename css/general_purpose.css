@@ -1,0 +1,91 @@
+html {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body {
+    background-color: #2f2f2f;
+    color: white;
+}
+h1, h2, h3 {
+    font-weight: bold;
+    color: #0062fe;
+}
+hr {
+    border: 2px solid #0062fe;
+    width: 970px;
+}
+a {
+    color: #0062fe;
+    text-decoration: none;
+}
+#main {
+    width: 1400px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#title {
+    height: 60px;
+    margin: 0;
+}
+#title h1 {
+    text-align: center;
+    padding-top: 20px;
+    margin: 0;
+}
+#what_is_this {
+    width: 910px;
+    margin-top: 35px;
+    margin-left: 50px;
+    margin-right: 95px;
+    padding: 10px;
+    float: left;
+    text-align: justify;
+    text-justify: inter-word;
+}
+#what_is_this h2{
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+#what_is_this p {
+    margin-top: 0px;
+}
+#right_column {
+    width: 270px;
+    margin-left: 0;
+    margin-right: 30px;
+    margin-top: 35px;
+    padding: 10px;
+    overflow: hidden;
+}
+#right_column .image_personal_inf {
+    padding-right: 10px;
+    float: left;
+}
+#right_column p {
+    padding: 5px;
+    margin: 5px;
+    margin-left: 2px;
+    overflow: hidden;
+}
+#right_column h3 {
+    margin-bottom: 0px;
+}
+.image_personal_inf {
+    width: 30px;
+}
+.image_link {
+    text-decoration: none;
+}
+#social_networks-contact img{
+    width: 60px;
+    padding: 15px;
+}
+.contact-logo:hover {
+    opacity: 0.3;
+}
+.text_gmail {
+    display: none;
+}
+.image_link:hover +.text_gmail {
+    display: block;
+}
