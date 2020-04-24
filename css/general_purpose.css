@@ -32,7 +32,7 @@ a {
     padding-top: 20px;
     margin: 0;
 }
-#what_is_this {
+#resume {
     width: 910px;
     margin-top: 35px;
     margin-left: 50px;
@@ -40,14 +40,39 @@ a {
     padding: 10px;
     float: left;
     text-align: justify;
-    text-justify: inter-word;
 }
-#what_is_this h2{
+#resume h2{
     padding-left: 25px;
-    margin-bottom: 10px;
+    padding-right: 25px;
 }
-#what_is_this p {
-    margin-top: 0px;
+.style_1{
+    margin-bottom: 100px;
+}
+.style_2 {
+    margin-bottom: 100px;
+}
+.title-left{
+    width: 300px;
+    float: left;
+    text-align: right;
+    margin-bottom: 0px;
+}
+.text-right {
+    width: 610px;
+    float: right;
+    text-align: left;
+}
+.text-left {
+    width: 610px;
+    float: left;
+    text-align: right;
+    margin-bottom: 0px;
+}
+.title-right {
+    width: 300px;
+    text-align: left;
+    float: right;
+    margin: 0px;
 }
 #right_column {
     width: 270px;
@@ -68,7 +93,7 @@ a {
     overflow: hidden;
 }
 #right_column h3 {
-    margin-bottom: 0px;
+    margin-bottom: 20px;
 }
 .image_personal_inf {
     width: 30px;
