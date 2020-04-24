@@ -1,5 +1,3 @@
-# PERSONAL WEB PROJECT
+# MY PORTFOLIO (CV)
 
-### Goals  
-* Make a proper web page
-* Use JAVASCRIPT
+This repository is for my personal portfolio. A web page CV, where my abilities as web developer are reflected.
