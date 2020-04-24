@@ -41,6 +41,9 @@ a {
     float: left;
     text-align: justify;
 }
+#resume p {
+    line-height: 30px;
+}
 #resume h2{
     padding-left: 25px;
     padding-right: 25px;
