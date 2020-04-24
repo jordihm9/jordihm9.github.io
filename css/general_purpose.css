@@ -17,6 +17,27 @@ a {
     color: #0062fe;
     text-decoration: none;
 }
+a:hover {
+    color: darkred;
+}
+#language_selector {
+    width: fit-content;
+    float: right;
+    margin-right: 40px;
+}
+.flags{
+    border-radius: 50%;
+    border: 8px solid #2f2f2f;
+    width: 23px;
+    padding: 0px;
+    margin: 0px;
+}
+.flags:hover {
+    opacity: 0.4;
+}
+#language_selector a{
+    color: transparent;
+}
 #main {
     width: 1400px;
     margin-top: 40px;
