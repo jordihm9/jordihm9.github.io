@@ -20,10 +20,15 @@ a {
 a:hover {
     color: darkred;
 }
-#language_selector {
+#flags_div {
     width: fit-content;
-    float: right;
-    margin-right: 40px;
+    height: fit-content;
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin-top: 10px;
+    margin-right: 35px;
+    overflow: visible;
 }
 .flags{
     border-radius: 50%;
@@ -35,18 +40,22 @@ a:hover {
 .flags:hover {
     opacity: 0.4;
 }
-#language_selector a{
+header a{
     color: transparent;
 }
 #main {
     width: 1400px;
-    margin-top: 40px;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
 }
 #title {
-    height: 60px;
+    height: 68px;
     margin: 0;
+    margin-bottom: 0px;
+    position: sticky;
+    top: 0;
+    background-color: #2f2f2f;
 }
 #title h1 {
     text-align: center;
