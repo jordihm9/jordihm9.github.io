@@ -41,6 +41,22 @@ aside {
 aside p {
     margin: 0 0 10px 30px;
 }
+section#personal-information {
+    display: flex;
+    flex-direction: column;
+}
+section#personal-information p {
+    display: flex;
+    align-items: center;
+}
+section#personal-information img {
+    width: 9%;
+    margin-right: 20px;
+}
+div.images img {
+    width: 25%;
+    margin: 10px;
+}
 article#resume {
     flex: 70%;
     padding: 30px;
@@ -62,25 +78,36 @@ article#resume section p {
     text-align: justify;
     padding: 20px;
 }
-section#personal-information {
+div.skills-columns{
+    position: relative;
+    left: 20%;
+    width: 80%;
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
+    align-content: center;
 }
-section#personal-information p {
-    display: flex;
-    align-items: center;
+div.skill-category {
+    padding-left: 20px;
 }
-section#personal-information img {
-    width: 9%;
-    margin-right: 20px;
+div.skill-category h3 {
+    margin: 0
 }
-div.images img {
-    width: 25%;
-    margin: 10px;
+div.skills-columns ul {
+    list-style: none;
+    padding-left: 10px;
+    padding-right: 30px;
+    line-height: 27px;
+    margin: 10px 0 0 0;
 }
 @media screen and (max-width: 900px) {
     div#main {
         flex-direction: column;
+    }
+    div#main section p {
+        text-align: left;
+    }
+    article#resume {
+        padding-left: 0;
     }
     article#resume section {
         flex-direction: column;
@@ -88,5 +115,13 @@ div.images img {
     }
     article#resume h2, article#resume p {
         flex: 100%;
+        margin: 0;
+    }
+    div.skills-columns {
+        flex-direction: column;
+        left: 0;
+    }
+    div.skills-columns ul {
+        margin-bottom: 20px;
     }
 }
