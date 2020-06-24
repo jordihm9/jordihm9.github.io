@@ -1,5 +1,6 @@
 html {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
 }
 body {
     background-color: #2f2f2f;
@@ -11,7 +12,7 @@ h1, h2, h3 {
 }
 hr {
     border: 2px solid #0062fe;
-    width: 970px;
+    margin: 0;
 }
 a {
     color: #0062fe;
@@ -20,117 +21,72 @@ a {
 a:hover {
     color: darkred;
 }
-#flags_div {
-    width: fit-content;
-    height: fit-content;
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin-top: 10px;
-    margin-right: 35px;
-}
-.flags{
-    border-radius: 50%;
-    border: 8px solid #2f2f2f;
-    width: 23px;
-    padding: 0px;
-    margin: 0px;
-}
-.flags:hover {
-    opacity: 0.4;
-}
-header a{
-    color: transparent;
-}
-#main {
-    width: 1400px;
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-}
-#title {
-    height: 68px;
-}
-#title h1 {
-    text-align: center;
-    margin-bottom: 5px;
-}
-#resume {
-    width: 965px;
-    margin-top: 35px;
-    margin-left: 40px;
-    margin-right: 40px;
-    text-align: justify;
-}
-#resume h2{
-    padding-left: 25px;
-    padding-right: 25px;
-}
-.style_1, .style_2{
-    margin-bottom: 50px;
-}
-/* ------------------ */
-/* style 1 */
-.title-left{
-    width: 330px;
-    text-align: right;
-    float: left;
-}
-.text-right {
-    width: 635px;
-    text-align: left;
-    display: inline-block;
-    line-height: 40px;
-}
-/* style 2 */
-.text-left {
-    width: 635px;
-    text-align: right;
-    display: inline-block;
-    line-height: 40px;
-}
-.title-right {
-    width: 330px;
-    text-align: left;
-    float: right;
-}
-/* ------------------ */
-#right_column {
-    width: 270px;
-    top: 123px;
-    right: 64px;
-    padding: 10px;
-    position: absolute;
-}
-#right_column .image_personal_inf {
-    padding-right: 10px;
-    float: left;
-}
-#right_column p {
-    padding: 5px;
-    margin: 5px;
-    margin-left: 2px;
-    overflow: hidden;
-}
-#right_column h3 {
-    margin-bottom: 20px;
-}
-.image_personal_inf {
-    width: 30px;
-}
-.image_link {
-    text-decoration: none;
-}
-#social_networks-contact img{
-    width: 60px;
-    padding: 15px;
-}
-.contact-logo:hover {
+img.img-hover:hover {
     opacity: 0.3;
 }
-.text_gmail {
-    display: none;
+div#title {
+    text-align: center;
 }
-.image_link:hover +.text_gmail {
-    display: block;
+div#title hr {
+    width: 65%;
+    margin: 0 auto 0 auto;
+}
+div#main {
+    display: flex;
+}
+aside {
+    flex: 30%;
+    padding: 20px 35px 35px 35px;
+}
+aside p {
+    margin: 0 0 10px 30px;
+}
+article#resume {
+    flex: 70%;
+    padding: 30px;
+}
+article#resume p {
+    line-height: 30px;
+}
+article#resume section {
+    display: flex;
+    padding: 20px;
+    align-items: baseline;
+}
+article#resume section h2 {
+    flex: 20%;
+    text-align: right;
+}
+article#resume section p {
+    flex: 80%;
+    text-align: justify;
+    padding: 20px;
+}
+section#personal-information {
+    display: flex;
+    flex-direction: column;
+}
+section#personal-information p {
+    display: flex;
+    align-items: center;
+}
+section#personal-information img {
+    width: 9%;
+    margin-right: 20px;
+}
+div.images img {
+    width: 25%;
+    margin: 10px;
+}
+@media screen and (max-width: 900px) {
+    div#main {
+        flex-direction: column;
+    }
+    article#resume section {
+        flex-direction: column;
+        width: 100%;
+    }
+    article#resume h2, article#resume p {
+        flex: 100%;
+    }
 }
