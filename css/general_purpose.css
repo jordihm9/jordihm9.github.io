@@ -62,15 +62,15 @@ aside {
 aside p {
     margin: 0 0 10px 30px;
 }
-section#personal-information {
+article#personal-information {
     display: flex;
     flex-direction: column;
 }
-section#personal-information p {
+article#personal-information p {
     display: flex;
     align-items: center;
 }
-section#personal-information img {
+article#personal-information img {
     width: 9%;
     margin-right: 20px;
 }
@@ -78,23 +78,23 @@ div.images img {
     width: 25%;
     margin: 10px;
 }
-article#resume {
+section#resume {
     flex: 70%;
     padding: 30px;
 }
-article#resume p {
+section#resume p {
     line-height: 30px;
 }
-article#resume section {
+section#resume article {
     display: flex;
     padding: 20px;
     align-items: baseline;
 }
-article#resume section h2 {
+section#resume article h2 {
     flex: 20%;
     text-align: right;
 }
-article#resume section p {
+section#resume article p {
     flex: 80%;
     text-align: justify;
     padding: 20px;
@@ -132,14 +132,14 @@ div.skills-columns ul {
     div#main section p {
         text-align: left;
     }
-    article#resume {
+    section#resume {
         padding-left: 0;
     }
-    article#resume section {
+    section#resume section {
         flex-direction: column;
         width: 100%;
     }
-    article#resume h2, article#resume p {
+    section#resume h2, section#resume p {
         flex: 100%;
         margin: 0;
     }
