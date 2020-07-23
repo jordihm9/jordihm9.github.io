@@ -19,7 +19,7 @@ a {
     text-decoration: none;
 }
 a:hover {
-    color: darkred;
+    font-weight: bolder;
 }
 img.img-hover:hover {
     opacity: 0.3;
@@ -100,11 +100,8 @@ div.skills-columns ul {
     margin: 10px 0 0 0;
 }
 @media screen and (max-width: 900px) {
-    div#main {
+    main {
         flex-direction: column;
-    }
-    div#main section p {
-        text-align: left;
     }
     section#resume {
         padding-left: 0;
@@ -113,9 +110,10 @@ div.skills-columns ul {
         flex-direction: column;
         width: 100%;
     }
-    section#resume h2, section#resume p {
+    section#resume h2, section#resume article p {
         flex: 100%;
         margin: 0;
+        text-align: left;
     }
     div.skills-columns {
         flex-direction: column;
