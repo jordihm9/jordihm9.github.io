@@ -31,7 +31,7 @@ div#title hr {
     width: 65%;
     margin: 0 auto 0 auto;
 }
-div#main {
+main {
     display: flex;
 }
 aside {
