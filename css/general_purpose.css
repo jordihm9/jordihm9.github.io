@@ -129,7 +129,7 @@ article.skills-columns ul {
         flex-direction: column;
     }
     section#resume {
-        padding-left: 0;
+        padding: 0;
     }
     section#resume section {
         flex-direction: column;
