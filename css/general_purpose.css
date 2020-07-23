@@ -62,10 +62,6 @@ aside {
 aside p {
     margin: 0 0 10px 30px;
 }
-article#personal-information {
-    display: flex;
-    flex-direction: column;
-}
 article#personal-information p {
     display: flex;
     align-items: center;
