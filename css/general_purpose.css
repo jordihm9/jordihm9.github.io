@@ -78,11 +78,10 @@ section#resume article p {
     text-align: justify;
     padding: 20px;
 }
-div.skills-columns{
+article.skills-columns{
     position: relative;
     left: 20%;
     width: 80%;
-    display: flex;
     flex-flow: row wrap;
     align-content: center;
 }
@@ -92,7 +91,7 @@ div.skill-category {
 div.skill-category h3 {
     margin: 0
 }
-div.skills-columns ul {
+article.skills-columns ul {
     list-style: none;
     padding-left: 10px;
     padding-right: 30px;
@@ -115,11 +114,16 @@ div.skills-columns ul {
         margin: 0;
         text-align: left;
     }
-    div.skills-columns {
+    article.skills-columns ul {
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 500px) {
+    section#resume article {
+        flex-direction: column;
+    }
+    article.skills-columns {
         flex-direction: column;
         left: 0;
-    }
-    div.skills-columns ul {
-        margin-bottom: 20px;
     }
 }
