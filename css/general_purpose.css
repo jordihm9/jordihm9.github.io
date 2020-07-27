@@ -2,28 +2,31 @@ html {
     font-family: hack, monospace;
     margin: 0;
 }
+
 body {
     background-color: #2f2f2f;
     color: white;
 }
+
 h1, h2, h3 {
     font-weight: bold;
     color: #0062fe;
 }
+
 hr {
     border: 2px solid #0062fe;
     margin: 0;
 }
+
 a {
     color: #0062fe;
     text-decoration: none;
 }
+
 a:hover {
     font-weight: bolder;
 }
-img.img-hover:hover {
-    opacity: 0.3;
-}
+
 div#lang-select {
     width: max-content;
     position: absolute;
@@ -32,91 +35,112 @@ div#lang-select {
     display: flex;
     flex-direction: row;
 }
-img.flags {
+
+img.flag-img {
     border-radius: 50%;
     border: 8px solid #2f2f2f;
     padding: 0;
     margin: 0;
     width: 23px;
 }
-img.flags:hover {
+
+img.flag-img:hover, img.img-social-net:hover {
     opacity: 0.4;
 }
+
 div#lang-select a {
     color: transparent;
 }
+
 div#title {
     text-align: center;
 }
+
 div#title hr {
     width: 65%;
     margin: 0 auto 0 auto;
 }
+
 main {
     display: flex;
 }
+
 aside {
     flex: 30%;
     padding: 20px 35px 35px 35px;
 }
+
 aside p {
     margin: 0 0 10px 30px;
 }
+
 article#personal-information p {
     display: flex;
     align-items: center;
 }
+
 article#personal-information img {
     width: 9%;
     margin-right: 20px;
 }
+
 div.images img {
     width: 20%;
     margin: 10px;
 }
+
 section#resume {
     flex: 70%;
     padding: 30px;
 }
+
 section#resume p {
-    line-height: 30px;
+    line-height: 33px;
 }
+
 section#resume article {
     display: flex;
     padding: 20px;
     align-items: baseline;
 }
+
 section#resume article h2 {
     flex: 20%;
     text-align: right;
 }
+
 section#resume article p {
     flex: 80%;
     text-align: justify;
     padding: 20px;
 }
-article.skills-columns{
+
+article#skills-columns {
     position: relative;
     left: 20%;
     width: 80%;
     flex-flow: row wrap;
     align-content: center;
 }
+
 div.skill-category {
     padding-left: 20px;
 }
+
 div.skill-category h3 {
     margin: 0
 }
-article.skills-columns ul {
+
+div.skill-category ul {
     list-style: none;
     padding-left: 10px;
     padding-right: 30px;
     line-height: 27px;
     margin: 10px 0 0 0;
 }
+
 @media screen and (max-width: 900px) {
-    div#lang-select{
+    div#lang-select {
         flex-direction: column;
         right: 10px;
         top: 5px;
@@ -136,15 +160,16 @@ article.skills-columns ul {
         margin: 0;
         text-align: left;
     }
-    article.skills-columns ul {
+    article#skills-columns ul {
         margin-bottom: 20px;
     }
 }
+
 @media screen and (max-width: 500px) {
     section#resume article {
         flex-direction: column;
     }
-    article.skills-columns {
+    article#skills-columns {
         flex-direction: column;
         left: 0;
     }
