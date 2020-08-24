@@ -1,3 +1,31 @@
+@font-face {
+    font-family: hack;
+    src: url(../fonts/Hack-Regular.woff);
+    style: normal;
+    weight: normal;
+}
+
+@font-face {
+    font-family: hack;
+    src: url(../fonts/Hack-Italic.woff);
+    style: italic;
+    weight: normal;
+}
+
+@font-face {
+    font-family: hack;
+    src: url(../fonts/Hack-Bold.woff);
+    style: normal;
+    weight: bold;
+}
+
+@font-face {
+    font-family: hack;
+    src: url(../fonts/Hack-BoldItalic.woff);
+    style: italic;
+    weight: bold;
+}
+
 html {
     font-family: hack, monospace;
     margin: 0;
