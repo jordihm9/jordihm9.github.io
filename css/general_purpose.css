@@ -1,29 +1,29 @@
 @font-face {
     font-family: hack;
     src: url(../fonts/Hack-Regular.woff);
-    style: normal;
-    weight: normal;
+    font-style: normal;
+    font-weight: normal;
 }
 
 @font-face {
     font-family: hack;
     src: url(../fonts/Hack-Italic.woff);
-    style: italic;
-    weight: normal;
+    font-style: italic;
+    font-weight: normal;
 }
 
 @font-face {
     font-family: hack;
     src: url(../fonts/Hack-Bold.woff);
-    style: normal;
-    weight: bold;
+    font-style: normal;
+    font-weight: bold;
 }
 
 @font-face {
     font-family: hack;
     src: url(../fonts/Hack-BoldItalic.woff);
-    style: italic;
-    weight: bold;
+    font-style: italic;
+    font-weight: bold;
 }
 
 html {
