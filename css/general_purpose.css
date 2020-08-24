@@ -94,10 +94,6 @@ section#resume {
     padding: 30px;
 }
 
-section#resume p {
-    line-height: 33px;
-}
-
 section#resume article {
     display: flex;
     padding: 20px;
@@ -113,6 +109,7 @@ section#resume article p {
     flex: 80%;
     text-align: justify;
     padding: 20px;
+    line-height: 33px;
 }
 
 article#skills-columns {
@@ -139,27 +136,59 @@ div.skill-category ul {
     margin: 10px 0 0 0;
 }
 
+/* Work Experience section style */
+article#work-experience h3 {
+    color: white;
+    margin-bottom: 0;
+    padding-bottom: 5px;
+}
+
+article#work-experience hr {
+    width: 50%;
+    border-color: white;
+    margin-bottom: 20px;
+
+}
+
+article#work-experience div.work-detail {
+    padding: 0 0 20px 20px;
+    display: flex;
+    flex-flow: row;
+}
+
+article#work-experience div.work-period {
+    font-style: italic;
+    text-align: right;
+    padding-right: 70px;
+    width: 20%;
+}
+
 @media screen and (max-width: 900px) {
     div#lang-select {
         flex-direction: column;
         right: 10px;
         top: 5px;
     }
+    
     main {
         flex-direction: column;
     }
+    
     section#resume {
         padding: 0;
     }
+    
     section#resume section {
         flex-direction: column;
         width: 100%;
     }
+    
     section#resume h2, section#resume article p {
         flex: 100%;
         margin: 0;
         text-align: left;
     }
+
     article#skills-columns ul {
         margin-bottom: 20px;
     }
