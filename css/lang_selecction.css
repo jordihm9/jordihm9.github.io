@@ -1,0 +1,25 @@
+div#lang-select {
+    width: max-content;
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+img.flag-img {
+    border-radius: 50%;
+    border: 8px solid #2f2f2f;
+    padding: 0;
+    margin: 0;
+    width: 23px;
+}
+
+img.flag-img:hover, img.img-social-net:hover {
+    opacity: 0.4;
+}
+
+div#lang-select a {
+    color: transparent;
+    text-decoration: none;
+}
