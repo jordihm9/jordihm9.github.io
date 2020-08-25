@@ -26,3 +26,11 @@
     font-style: italic;
     font-weight: bold;
 }
+
+/* import Carter One font */
+@font-face {
+    font-family: Carter One;
+    src: url(../fonts/CarterOne-Regular.ttf);
+    font-style: normal;
+    font-weight: 400;
+}
