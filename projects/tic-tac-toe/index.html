@@ -2,14 +2,14 @@
 <html>
 
 <head>
-    <title>Tic Tac Toe</title>
+    <title> Tic Tac Toe</title>
     <meta charset="UTF-8">
     <meta name="author" content="Jordi Hernandez">
     <meta name="description" content="Tic Tac Toe Game">
     <meta name="keywords" content="Tic-Tac-Toe, HTML, CSS, JAVASCRIPT, PROJECT, GAME">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- page icon: -->
-    <!-- <link rel="shortcut icon" type="image/x-icon" href=""> -->
+    <link rel="shortcut icon" type="image/x-icon" href="../../images/projects/tic-tac-toe/tic-tac-toe.png">
     <!-- import hack font -->
     <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.css'>
     <!-- import Carter One font -->
@@ -18,10 +18,12 @@
     <link rel="stylesheet" href="../../css/fonts.css">
     <!-- link to language seleccion div stylesheet -->
     <link rel="stylesheet" href="../../css/lang_selecction.css">
+    <!-- link to tic tac toe stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
+    <!-- <header>
         <div id="lang-select">
             <a href="../ca/index_ca.html" target="_self">
                 <span title="Català">
@@ -39,7 +41,53 @@
                 </span>
             </a>
         </div>
-    </header>
+    </header> -->
+    <main>
+        <section id="title">
+            <h1>
+                Tic <span style="color: #4DBE37">Tac</span> Toe
+            </h1>
+        </section>
+        <section id="game">
+            <div id="board">
+                <div class="cell" onclick="play('1')">
+                    <div id="1" class="piece"></div>
+                </div>
+                <div class="cell" onclick="play('2')">
+                    <div id="2" class="piece"></div>
+                </div>
+                <div class="cell" onclick="play('3')">
+                    <div id="3" class="piece"></div>
+                </div>
+                <div class="cell" onclick="play('4')">
+                    <div id="4" class="piece"></div>
+                </div>
+                <div class="cell" onclick="play('5')">
+                    <div id="5" class="piece"></div>
+                </div>
+                <div class="cell" onclick="play('6')">
+                    <div id="6" class="piece"></div>
+                </div>
+                <div class="cell" onclick="play('7')">
+                    <div id="7" class="piece"></div>
+                </div>
+                <div class="cell" onclick="play('8')">
+                    <div id="8" class="piece"></div>
+                </div>
+                <div class="cell" onclick="play('9')">
+                    <div id="9" class="piece"></div>
+                </div>
+            </div>
+            <div id="winPopUp" >
+                <div id="winnerPiece"></div>
+            </div>
+        </section>
+        <div id="playAgain" onclick="cleanBoard()">
+                &olarr;
+        </div>
+    </main>
 </body>
+
+<script type="text/javascript" src="index.js"></script>
 
 </html>

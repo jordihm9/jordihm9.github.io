@@ -1,0 +1,89 @@
+html {
+    /* font-family: hack, monospace; */
+    font-family: Carter One;
+    margin: 0;
+}
+
+body {
+    background-color: #2f2f2f;
+    color: white;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+}
+
+#title h1 {
+    margin: auto;
+    color: #3068BE;
+    font-size: 65px;
+    font-weight: 200;
+}
+
+#game {
+    margin: auto;
+    margin-top: 25px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#board {
+    margin: auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto auto;
+    width: max-content;
+}
+#board .cell, .piece, #players .player-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#board .cell {
+    width: 100px;
+    height: 100px;
+    border: 10px solid #CEC2B7;
+    border-radius: 50%;
+}
+
+.piece {
+    border-radius: 50%;
+    width: 60%;
+    height: 60%;
+}
+
+.piece:hover {
+    background-color: #CEC2B7;
+}
+
+#winPopUp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+    display: none;
+}
+
+#winnerPiece {
+    border: 6px solid black;
+    border-radius: 50%;
+}
+
+#winnerPiece h2 {
+    padding: 20px 30px 20px 30px;
+    font-size: 20pt;
+    color: black;
+}
+
+#playAgain {
+    margin: auto;
+    font-size: 60pt;
+    transform: rotate(-170deg);
+    max-width: max-content;
+    max-height: max-content;
+    color: #CEC2B7;
+}
