@@ -71,13 +71,15 @@ body {
 #winnerPiece {
     width: 200px;
     height: 80px;
-    border: 6px solid #CEC2B7;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #CEC2B7;
+    background-color: #2f2f2f;
     border-radius: 30%;
 }
 
 #winnerPiece h2 {
     font-size: 20pt;
-    color: #CEC2B7;
     text-align: center;
 }
 

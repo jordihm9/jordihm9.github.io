@@ -89,6 +89,7 @@ function checkWin() {
 
 function play(cell) {
     const player = playerTurn();
+    let winnerPiece = document.getElementById("winnerPiece");
 
     if (document.getElementById(cell).style.backgroundColor == player1["color"] || document.getElementById(cell).style.backgroundColor == player2["color"]) {
         return false;
@@ -103,14 +104,15 @@ function play(cell) {
         let winner = checkWin();
         if (!winner) { // case there's no winner
             console.log('No one wins');
-            document.getElementById("winnerPiece").style.backgroundColor = "#2f2f2f";
-            document.getElementById("winnerPiece").innerHTML = "<h2>D R A W</h2>";
+            winnerPiece.style.backgroundColor = "#2F2F2F";
+            winnerPiece.style.color = "#CEC2B7";
+            winnerPiece.innerHTML = "<h2>D R A W</h2>";
         } else { // case one player wins
             winner = player;
-            document.getElementById("winnerPiece").innerHTML = "<h2>W I N N E R</h2>";
+            winnerPiece.style.color = winner["color"];
+            winnerPiece.innerHTML = "<h2>W I N N E R</h2>";
             console.log('Player ', winner["id"], ' wins!');
             winner["wins"]++;
-            document.getElementById("winnerPiece").style.backgroundColor = winner["color"];
             showElement("winPopUp");
             blurElement("board");
         }
