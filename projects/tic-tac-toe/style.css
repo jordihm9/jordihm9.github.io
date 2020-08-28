@@ -16,7 +16,7 @@ body {
 
 #title h1 {
     margin: auto;
-    color: #3068BE;
+    color: #CEC2B7;
     font-size: 65px;
     font-weight: 200;
 }
@@ -69,14 +69,16 @@ body {
 }
 
 #winnerPiece {
-    border: 6px solid black;
-    border-radius: 50%;
+    width: 200px;
+    height: 80px;
+    border: 6px solid #CEC2B7;
+    border-radius: 30%;
 }
 
 #winnerPiece h2 {
-    padding: 20px 30px 20px 30px;
     font-size: 20pt;
-    color: black;
+    color: #CEC2B7;
+    text-align: center;
 }
 
 #playAgain {

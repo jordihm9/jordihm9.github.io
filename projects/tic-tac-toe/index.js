@@ -3,13 +3,13 @@
 // players
 const player1 = {
     "id" : 1,
-    "color" : '#3068BE',
+    "color" : '#395CD4', // blue
     "wins" : 0
 }
 
 const player2 = {
     "id" : 2,
-    "color" : '#4DBE37',
+    "color" : "#FFC300", // yellow
     "wins" : 0
 }
 
@@ -103,11 +103,11 @@ function play(cell) {
         let winner = checkWin();
         if (!winner) { // case there's no winner
             console.log('No one wins');
-            document.getElementById("winnerPiece").style.backgroundColor = "#CEC2B7";
-            document.getElementById("winnerPiece").innerHTML = "<h2>DRAW</h2>";
+            document.getElementById("winnerPiece").style.backgroundColor = "#2f2f2f";
+            document.getElementById("winnerPiece").innerHTML = "<h2>D R A W</h2>";
         } else { // case one player wins
             winner = player;
-            document.getElementById("winnerPiece").innerHTML = "<h2>WINNER</h2>";
+            document.getElementById("winnerPiece").innerHTML = "<h2>W I N N E R</h2>";
             console.log('Player ', winner["id"], ' wins!');
             winner["wins"]++;
             document.getElementById("winnerPiece").style.backgroundColor = winner["color"];
