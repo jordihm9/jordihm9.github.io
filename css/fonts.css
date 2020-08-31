@@ -34,3 +34,11 @@
     font-style: normal;
     font-weight: 400;
 }
+
+/* import Righteous font */
+@font-face {
+    font-family: Righteous;
+    src: url(../fonts/Righteous-Regular.ttf);
+    font-style: normal;
+    font-weight: 400;
+}
