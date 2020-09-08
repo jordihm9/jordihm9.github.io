@@ -23,3 +23,11 @@ div#lang-select a {
     color: transparent;
     text-decoration: none;
 }
+
+@media screen and (max-width: 900px) {
+    div#lang-select {
+        flex-direction: column;
+        right: 10px;
+        top: 5px;
+    }
+}
