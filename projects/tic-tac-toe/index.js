@@ -19,7 +19,7 @@ let turns = 0;
 // cleaning
 function cleanElement(id) {
     document.getElementById(id).innerText = '';
-    document.getElementById(id).style.backgroundColor = 'unset';
+    document.getElementById(id).style.backgroundColor = null;
 }
 function cleanBoard() {
     rounds++;
