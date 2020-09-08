@@ -93,7 +93,8 @@ function play(cell) {
     let piece = document.getElementById(cell);
     let winnerPiece = document.getElementById("winnerPiece");
 
-    if (piece.style.backgroundColor == player1["color"] || piece.style.backgroundColor == player2["color"]) {
+    // prevent overwrite cell already with a piece
+    if (piece.classList.length == 2) {
         return false;
     }
 
