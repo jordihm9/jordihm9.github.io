@@ -56,7 +56,7 @@ body {
 }
 
 .piece:hover {
-    background-color: #CEC2B7;
+    background-color: #CEC2B7 !important;
 }
 
 #winPopUp {
