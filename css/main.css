@@ -27,6 +27,8 @@ a:hover {
     font-weight: bolder;
 }
 
+/* ------------------ HEADER */
+
 div#title {
     text-align: center;
 }
@@ -36,9 +38,7 @@ div#title hr {
     margin: 0 auto 0 auto;
 }
 
-main {
-    display: flex;
-}
+/* ------------------ ASIDE */
 
 aside {
     flex: 30%;
@@ -49,6 +49,7 @@ aside p {
     margin: 0 0 10px 30px;
 }
 
+/* Personal Information */
 article#personal-information p {
     display: flex;
     align-items: center;
@@ -59,9 +60,24 @@ article#personal-information img {
     margin-right: 20px;
 }
 
-div.images img {
-    width: 20%;
-    margin: 10px;
+/* Social Networks */
+.social-net-icons-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+.social-net-icons {
+    width: 80px;
+    padding: 0 20px 15px 20px;
+}
+
+/* ------------------ MAIN */
+
+main {
+    display: flex;
 }
 
 section#resume {
@@ -87,6 +103,7 @@ section#resume article p {
     line-height: 33px;
 }
 
+/* Skills */
 article#skills-columns {
     position: relative;
     left: 20%;
