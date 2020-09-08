@@ -18,8 +18,9 @@ let turns = 0;
 
 // cleaning
 function cleanElement(id) {
-    document.getElementById(id).innerText = '';
-    document.getElementById(id).style.backgroundColor = null;
+    let element = document.getElementById(id);
+    element.classList.remove(element.classList[1]);
+    element.style.backgroundColor = null;
 }
 function cleanBoard() {
     rounds++;
@@ -62,42 +63,43 @@ function checkWin() {
     // check horitzonal
     console.log('Checking horitzontal');
     for (let i = 1; i < 9; i+=3) {
-        if (document.getElementById(i).innerText === document.getElementById(i+1).innerText && document.getElementById(i).innerText === document.getElementById(i+2).innerText) {
-            return document.getElementById(i).innerText;
+        if (document.getElementById(i).classList[1] === document.getElementById(i+1).classList[1] && document.getElementById(i).classList[1] === document.getElementById(i+2).classList[1]) {
+            return document.getElementById(i).classList[1];
         }
     }
 
     // check vertical
     console.log('Checking vertical');
     for (let i = 1; i <= 3; i++) {
-        if (document.getElementById(i).innerText === document.getElementById(i+3).innerText && document.getElementById(i).innerText === document.getElementById(i+6).innerText) {
-            return document.getElementById(i).innerText;
+        if (document.getElementById(i).classList[1] === document.getElementById(i+3).classList[1] && document.getElementById(i).classList[1] === document.getElementById(i+6).classList[1]) {
+            return document.getElementById(i).classList[1];
         }
     }
 
     // check diagonals
     console.log('Checking diagonals');
-    if (document.getElementById(1).innerText === document.getElementById(5).innerText && document.getElementById(1).innerText === document.getElementById(9).innerText){
-        return document.getElementById(5).innerText;
+    if (document.getElementById(1).classList[1] === document.getElementById(5).classList[1] && document.getElementById(1).classList[1] === document.getElementById(9).classList[1]){
+        return document.getElementById(5).classList[1];
     }
-    if (document.getElementById(3).innerText === document.getElementById(5).innerText && document.getElementById(3).innerText === document.getElementById(7).innerText){
-        return document.getElementById(5).innerText;
+    if (document.getElementById(3).classList[1] === document.getElementById(5).classList[1] && document.getElementById(3).classList[1] === document.getElementById(7).classList[1]){
+        return document.getElementById(5).classList[1];
     }
 
     return false; // no winner
 }
 
 function play(cell) {
-    const player = playerTurn();
+    let player = playerTurn();
+    let piece = document.getElementById(cell);
     let winnerPiece = document.getElementById("winnerPiece");
 
-    if (document.getElementById(cell).style.backgroundColor == player1["color"] || document.getElementById(cell).style.backgroundColor == player2["color"]) {
+    if (piece.style.backgroundColor == player1["color"] || piece.style.backgroundColor == player2["color"]) {
         return false;
     }
 
-    document.getElementById(cell).innerText = player["id"];
-    document.getElementById(cell).style.backgroundColor = player["color"];
-    document.getElementById(cell).style.color = player["color"];
+    piece.classList.add(player["id"]); // add identifier of the player as a class
+    piece.style.backgroundColor = player["color"];
+    piece.style.color = player["color"];
     turns++;
     
     if (turns > 4) { // just check winner if player who started the round played 3 turns
