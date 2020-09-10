@@ -72,6 +72,11 @@ article#personal-information img {
 .social-net-icons {
     width: 80px;
     padding: 0 20px 15px 20px;
+    transition: 0.4s
+}
+
+.social-net-icons:hover {
+    transform: scale(1.15);
 }
 
 /* Projects */
