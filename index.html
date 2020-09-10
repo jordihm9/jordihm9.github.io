@@ -2,6 +2,16 @@
 <html lang="en">
 
 <style>
+    :root {
+        --accent-color: #0062fe;
+    }
+
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
     html {
         font-family: hack, monospace;
     }
@@ -13,47 +23,98 @@
 
     h1 {
         font-weight: bold;
-        color: #0062fe;
+        color: var(--accent-color);
     }
 
     img {
         border-radius: 50%;
         border: 8px solid #2f2f2f;
-        width: 100px;
-        padding: 0;
-        margin: 0;
-    }
-
-    img:hover {
-        opacity: 0.4;
-    }
-
-    div#lang-selector {
-        position: relative;
-        top: 100px;
-        width: max-content;
-        margin: 0 auto 0 auto;
-        padding-bottom: 1%;
-        background-color: #2f2f2f;
-        border: 4px solid #0062fe;
-        border-radius: 10px;
-        box-shadow: 18px 18px 7px #252525;
-    }
-
-    div.title {
-        text-align: center;
-        margin: 0 20px 0 20px;
-    }
-
-    div.flags-div {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
+        max-width: 100%;
     }
 
     a {
         color: transparent;
     }
+
+    img:hover {
+        opacity: 0.4;
+    }
+    
+    div#title {
+        text-align: center;
+    }
+
+    div#lang-selector {
+        position: relative;
+        top: 100px;
+        width: 500px;
+        margin: auto;
+        padding: 15px;
+        background-color: #2f2f2f;
+        border: 4px solid var(--accent-color);
+        border-radius: 10px;
+        box-shadow: 18px 18px 7px #252525;
+    }
+
+    div.flags-box {
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        margin: auto;
+        margin-top: 10px;
+        width: 80%;
+    }
+    
+    .lang-box h3 {
+        display: none;
+    }
+
+    .lang-box h3:hover {
+        color: var(--accent-color);
+    }
+
+    @media screen and (max-width: 600px) {
+        div#lang-selector {
+            width: 90%;
+        }
+    }
+
+    @media screen and (max-width: 470px) {
+
+        div#title {
+            display: none;
+        }
+        
+        div#lang-selector {
+            width: 65%;
+        }
+        
+        .flags-box {
+            flex-direction: column;
+            margin: 0px;
+        }
+
+        .lang-box {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+
+        .lang-box h3 {
+            color: white;
+            display: inherit;
+            margin-left: 20px;
+        }
+
+        .text-link {
+            flex: 2;
+        }
+
+        .flag-link {
+            flex: 1;
+        }
+    }
+
 </style>
 
 <head>
@@ -73,28 +134,37 @@
 
 <body>
     <div id="lang-selector">
-        <div class="title">
+        <div id="title">
             <h1>Select your language</h1>
         </div>
-        <div class="flags-div">
-            <div>
-                <a href="ca/">
+        <div class="flags-box">
+            <div class="lang-box">
+                <a href="ca/" class="text-link">
+                    <h3>Català</h3>
+                </a>
+                <a href="ca/" class="flag-link">
                     <span title="Català">
-                        <img class="ca" class="flags" src="images/icons/catalan.png" alt="catalan flag">
+                        <img class="ca" class="flag" src="images/icons/catalan.png" alt="catalan flag">
                     </span>
                 </a>
             </div>
-            <div>
-                <a href="en/">
+            <div class="lang-box">
+                <a href="en/" class="text-link">
+                    <h3>English</h3>
+                </a>
+                <a href="en/" class="flag-link">
                     <span title="English">
-                        <img class="en" class="flags" src="images/icons/english.png" alt="UK flag">
+                        <img class="en" class="flag" src="images/icons/english.png" alt="UK flag">
                     </span>
                 </a>
             </div>
-            <div>
-                <a href="es/">
+            <div class="lang-box">
+                <a href="es/" class="text-link">
+                    <h3>Español</h3>
+                </a>
+                <a href="es/" class="flag-link">
                     <span title="Español">
-                        <img class="es" class="flags" src="images/icons/spanish.png" alt="spanish flag">
+                        <img class="es" class="flag" src="images/icons/spanish.png" alt="spanish flag">
                     </span>
                 </a>
             </div>
