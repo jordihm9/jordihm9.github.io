@@ -1,175 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<style>
-    :root {
-        --accent-color: #0062fe;
-    }
-
-    * {
-        margin: 0px;
-        padding: 0px;
-        box-sizing: border-box;
-    }
-
-    html {
-        font-family: hack, monospace;
-    }
-
-    body {
-        background-color: #2f2f2f;
-        color: white;
-    }
-
-    h1 {
-        font-weight: bold;
-        color: var(--accent-color);
-    }
-
-    img {
-        border-radius: 50%;
-        border: 8px solid #2f2f2f;
-        max-width: 100%;
-    }
-
-    a {
-        color: transparent;
-    }
-
-    img:hover {
-        opacity: 0.4;
-    }
-    
-    div#title {
-        text-align: center;
-    }
-
-    div#lang-selector {
-        position: relative;
-        top: 100px;
-        width: 500px;
-        margin: auto;
-        padding: 15px;
-        background-color: #2f2f2f;
-        border: 4px solid var(--accent-color);
-        border-radius: 10px;
-        box-shadow: 18px 18px 7px #252525;
-    }
-
-    div.flags-box {
-        display: flex;
-        justify-content: space-around;
-        align-content: center;
-        margin: auto;
-        margin-top: 10px;
-        width: 80%;
-    }
-    
-    .lang-box h3 {
-        display: none;
-    }
-
-    .lang-box h3:hover {
-        color: var(--accent-color);
-    }
-
-    @media screen and (max-width: 600px) {
-        div#lang-selector {
-            width: 90%;
-        }
-    }
-
-    @media screen and (max-width: 470px) {
-
-        div#title {
-            display: none;
-        }
-        
-        div#lang-selector {
-            width: 65%;
-        }
-        
-        .flags-box {
-            flex-direction: column;
-            margin: 0px;
-        }
-
-        .lang-box {
-            display: flex;
-            flex-direction: row-reverse;
-            align-items: center;
-        }
-
-        .lang-box h3 {
-            color: white;
-            display: inherit;
-            margin-left: 20px;
-        }
-
-        .text-link {
-            flex: 2;
-        }
-
-        .flag-link {
-            flex: 1;
-        }
-    }
-
-</style>
-
 <head>
-    <title> CV Online</title>
     <meta charset="UTF-8">
     <meta name="author" content="Jordi Hernandez">
-    <meta name="description" content="personal webpage">
+    <meta name="description" content="Personal Website">
     <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/language-selector.css">
-    <link rel="shortcut icon" type="image/x-icon" href="images/icons/page-icon.ico">
-    <!-- import hack font -->
-    <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.css'>
-    <!-- link to fonts stylesheet -->
-    <link rel="stylesheet" href="css/fonts.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/icons/developer.ico" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title> Jordi Hernandez</title>
 </head>
 
 <body>
-    <div id="lang-selector">
-        <div id="title">
-            <h1>Select your language</h1>
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>
+                    <a href="#landing">JHM</a>
+                </h1>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <!--
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+                -->
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+    <!-- MAIN -->
+    <main>
+
+        <!-- LANDING -->
+        <section id="landing">
+            <div class="text-intro">
+                <h1>Jordi Hernàndez</h1>
+                <h2>Web developer & Web designer.</h2>
+                <div class="button-box">
+                    <a href="#about" class="read-more">
+                        <button>Read more</button>
+                    </a>
+                </div>
+            </div>
+            <div class="img-intro">
+                <img src="images/other/landing-portrait.jpg" alt="portrait of myself">
+            </div>
+        </section>
+
+        <!-- CONTENT -->
+
+        <!-- about -->
+        <section id="about">
+
+            <!-- introduction -->
+            <article id="introduction" class="dark-back">
+                <div class="title">
+                    <h1>About me</h1>
+                    <img src="images/icons/simple-avatar.svg" alt="simple-avatar" class="icon">
+                </div>
+                <div class="group-box group1">
+                    <div class="text-article">
+                        <h1>
+                            Hi!
+                        </h1>
+                        <p>
+                            I am a
+                            <span id="age"></span>
+                            years old student on Web Application Development focused on
+                            builing the best and beautiful websites.
+                            <br>
+                            Programming is my passion but I also love music, photography and motorbikes.
+                        </p>
+                    </div>
+                    <div class="img-article">
+                        <img src="images/other/yamaha_xenter-front.jpeg" alt="yamaha x-enter front light"
+                            style="max-width: 50%;">
+                    </div>
+                </div>
+                <div class="group-box group2">
+                    <div class="text-article">
+                        <p>
+                            When I was young I used to play guitar. Taking part as a member of a few bands and played
+                            live on
+                            some ocasional events where I learned teamwork.
+                        </p>
+                    </div>
+                    <div class="img-article">
+                        <img src="images/other/portrait-play-guitar.jpg" alt="portrait playing guitar"
+                            style="max-width: 80%;">
+                    </div>
+                </div>
+            </article>
+
+            <!-- skills -->
+            <article id="skills" class="light-back">
+                <div class="title">
+                    <h1>Skills</h1>
+                    <img class="icon" src="images/icons/employee-skills.svg" alt="employee-skills">
+                </div>
+                <div class="skills-columns">
+                    <div class="skill-category">
+                        <h2>Languages</h2>
+                        <ul>
+                            <li>HTML 5</li>
+                            <li>CSS 3</li>
+                            <li>JavaScript</li>
+                            <li>Java</li>
+                            <li>SQL (MySQL)</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h2>Tools</h2>
+                        <ul>
+                            <li>Bash</li>
+                            <li>CMD & Powershell</li>
+                            <li>Git & GitHub</li>
+                            <li>Trello</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h2>Apps</h2>
+                        <ul>
+                            <li>Word</li>
+                            <li>Excel</li>
+                            <li>PowerPoint</li>
+                            <li>Gimp</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- experience -->
+            <article class="experience dark-back">
+                <div class="title">
+                    <h1>Experience</h1>
+                    <img src="images/icons/resume.svg" alt="resume" class="icon">
+                </div>
+                <table class="jobs-resume">
+                    <tr class="heading">
+                        <!-- <th>Year</th> -->
+                        <th>Period</th>
+                        <th>Job</th>
+                        <th>Company</th>
+                    </tr>
+                    <tr>
+                        <!-- <td>2019</td> -->
+                        <td>2019 <br> June - September</td>
+                        <td>Bar waiter</td>
+                        <td>Hotel Oasis Park</td>
+                    </tr>
+                    <tr>
+                        <!-- <td>2018</td> -->
+                        <td>2018 <br> July - September</td>
+                        <td>Bar waiter</td>
+                        <td>Hotel Oasis Park</td>
+                    </tr>
+                    <tr>
+                        <!-- <td>2018</td> -->
+                        <td>2018 <br> 13th October</td>
+                        <td>Auxiliary</td>
+                        <td>Audio Selva S.L.</td>
+                    </tr>
+                    <tr>
+                        <!-- <td>2017</td> -->
+                        <td>2017 <br> June - September</td>
+                        <td>Restaurant Waiter</td>
+                        <td>Hotel Astoria Park</td>
+                    </tr>
+                </table>
+            </article>
+        </section>
+
+        <!-- projects -->
+        <section id="projects">
+            <div class="title">
+                <h1>Projects</h1>
+                <img src="images/icons/job-portfolio.svg" alt="job-portfolio" class="icon">
+            </div>
+            <div id="projects-grid">
+                <div class="project"></div>
+                <div class="project"></div>
+            </div>
+        </section>
+
+        <!-- contact -->
+        <section id="contact">
+            <div class="title">
+                <h1>Contact</h1>
+                <img src="images/icons/deal.svg" alt="deal" class="icon">
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="content">
+            <div id="attributions">
+                <ul>
+                    <li>
+                        <a href="https://iconscout.com/icon-pack/job-services-2" target="_blank">Job Services Icon
+                            Pack</a> by <a href="https://iconscout.com/contributors/iconscout" target="_blank">Iconscout
+                            Freebies</a>
+                    </li>
+                    <li>
+                        <a href="https://iconscout.com/icons/developer" target="_blank">Developer Icon</a> by <a
+                            href="https://iconscout.com/contributors/google-inc" target="_blank">Google Inc.</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="flags-box">
-            <div class="lang-box">
-                <a href="ca/" class="text-link">
-                    <h3>Català</h3>
-                </a>
-                <a href="ca/" class="flag-link">
-                    <span title="Català">
-                        <img class="ca" class="flag" src="images/icons/catalan.png" alt="catalan flag">
-                    </span>
-                </a>
-            </div>
-            <div class="lang-box">
-                <a href="en/" class="text-link">
-                    <h3>English</h3>
-                </a>
-                <a href="en/" class="flag-link">
-                    <span title="English">
-                        <img class="en" class="flag" src="images/icons/english.png" alt="UK flag">
-                    </span>
-                </a>
-            </div>
-            <div class="lang-box">
-                <a href="es/" class="text-link">
-                    <h3>Español</h3>
-                </a>
-                <a href="es/" class="flag-link">
-                    <span title="Español">
-                        <img class="es" class="flag" src="images/icons/spanish.png" alt="spanish flag">
-                    </span>
-                </a>
-            </div>
-        </div>
-    </div>
+    </footer>
+
+    <script src="javascript/app.js"></script>
 </body>
 
 </html>

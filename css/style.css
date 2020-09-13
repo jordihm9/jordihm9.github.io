@@ -1,0 +1,470 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+    background-color: inherit;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    margin: auto; /* center the whole page*/
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--smoke-white);
+}
+
+:root {
+    --smoke-white: rgb(190, 190, 190);
+    --soft-black: rgb(53, 53, 53);
+    --grey-blured: rgba(71,71,71,0.4);
+    /* --accent-color: rgb(235,137,68);*/ /* ORANGE*/ 
+    --accent-color: rgb(110, 132, 95, 1); /* GREEN */
+    --nav-height: 8vh;
+    --black-blured-shadow: 3px 4px 12px 4px var(--soft-black);
+    --white-blured-shadow: 1.5px 2px 12px 2px var(--smoke-white);
+}
+
+/* ------------ HEADER */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+/* navigation bar */
+
+nav {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: var(--nav-height);
+    background-color: black;
+    color: var(--smoke-white);
+}
+
+.logo {
+    letter-spacing: 4px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    padding: 20px;
+    list-style: none;
+}
+
+.nav-links li {
+    font-size: 14.5pt;
+    transition: color 0.15s, transform 0.4s;
+    letter-spacing: 2px;
+}
+
+.nav-links li:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+.burger {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    cursor: pointer;
+}
+
+.burger div {
+    margin: 6px;
+    height: 4px;
+    width: 33px;
+    border-color: var(--smoke-white);
+    background-color: var(--smoke-white);
+    transition: transform 0.4s ease-in-out;
+}
+
+/* ---------------------------------------------- MAIN */
+main {
+    width: 94%;
+    margin: auto;
+    margin-top: var(--nav-height);
+}
+
+/* ----------------------- LANDING */
+
+#landing {
+    margin: 20px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.text-intro h1 {
+    text-align: right;
+    font-size: 35pt;
+    font-weight: 600;
+}
+
+.text-intro h2 {
+    font-size: 25pt;
+    font-weight: 200;
+    color: var(--soft-black);
+}
+
+.button-box button {
+    margin: 20px 0 0 0;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 12pt;
+    letter-spacing: 2px;
+    background-color: var(--accent-color);
+    color: white;
+    transition: 0.4s ease-in-out;
+    position: relative;
+    right: 0;
+}
+
+.text-intro button:hover {
+    background-color: var(--soft-black);
+}
+
+.img-intro img {
+    height: 550px;
+    transform: scale(0.9);
+    box-shadow: var(--black-blured-shadow);
+    animation-delay: 0.5s;
+    animation: drop 1.25s ease;
+}
+
+@keyframes drop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px), scale(0.9);
+    }
+}
+
+@media screen and (max-width: 985px) {
+    .img-intro img {
+        transform: scale(0.8);
+    }
+}
+
+/* -------------------- CONTENT */
+
+#about article {
+    padding: 30px;
+}
+
+/* dark background styling */
+.dark-back {
+    background-color: black;
+    color: var(--smoke-white);
+}
+
+.dark-back img {
+    box-shadow: var(--white-blured-shadow);
+}
+
+.dark-back .icon {
+    filter: invert(70%);
+}
+
+/* light background styling */
+.light-back img {
+    box-shadow: var(--black-blured-shadow);
+}
+
+.title .icon {
+    box-shadow: none;
+    width: 80px;
+}
+
+.title {
+    margin: 0 0 25px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+
+.title h1 {
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 24pt;
+    padding: 15px 0 0 0;
+}
+
+
+
+/* -- INTRODUCTION */
+.group-box {
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 30px 30px 30px;
+    width: 90%;
+}
+
+.text-article {
+    flex: 2;
+}
+
+.text-article h1 {
+    font-size: 23pt;
+    font-weight: 600;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    line-height: 2.5em;
+}
+
+.text-article p {
+    /* width: 80%; */
+    font-size: 14pt;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    line-height: 2em;
+}
+
+.img-article {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 10px 0;
+}
+
+/* group 1 style: image to right, text to left*/
+.group1 {
+    flex-direction: row-reverse;
+}
+
+/* group 2 style: image to left, text to right */
+.group2 {
+    text-align: right;
+}
+
+/* -- SKILLS */
+#skills .title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+
+.skills-columns {
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.skill-category {
+    flex: 1;
+}
+
+.skill-category h2{
+    font-size: 18pt;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+.skill-category ul {
+    list-style-type: none;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.skill-category li {
+    line-height: 2em;
+}
+
+/* -- EXPERIENCE */
+table.jobs-resume {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+}
+
+.jobs-resume tr { /* rows */
+    min-height: 2.5em;
+}
+
+.jobs-resume tr:nth-child(even) { /* even rows */
+    background-color: var(--soft-black);
+}
+
+.jobs-resume th {
+    font-size: 17pt;
+    font-weight: 200;
+    letter-spacing: 3px;
+}
+
+.jobs-resume td {
+    letter-spacing: 2px;
+    font-size: 15pt;
+}
+
+@media screen and (max-width: 1024px) {
+    table.jobs-resume {
+        width: 100%;
+    }
+}
+
+/* -------------------- PROJECTS */
+
+#projects {
+    display: none;
+}
+
+/* -------------------- CONTACT */
+
+#contact {
+    display: none;
+}
+
+/* ------------ FOOTER */
+footer {
+    display: flex;
+    align-items: center;
+    min-height: 10vh;
+    background-color: black;
+    margin: 2vh 0 0 0;
+    color: var(--smoke-white);
+}
+
+footer .content {
+    width: 85%;
+}
+
+#attributions {
+    text-align: right;
+}
+
+#attributions a {
+    color: var(--accent-color);
+}
+
+/* MEDIUM WIDTH RESPONSIVE */
+@media screen and (max-width: 985px) {
+    .nav-links  {
+        width: 65%;
+    }
+    
+    .skills-columns {
+        width: 100%;
+    }
+}
+
+/* --------------------------------- MOBILE FRIENDLY */
+@media screen and (max-width: 770px) {
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* ------------ HEADER */
+
+    .text-intro h1 {
+        font-size: 30pt;
+        margin: 25px 0 0 0;
+    }
+
+    .text-intro h2 {
+        font-size: 22pt
+    }
+
+    /* navigation bar */
+    .nav-links {
+        position: absolute;
+        right: 0;
+        top: var(--nav-height);
+        height: 45vh;
+        width: 40%;
+        transform: translateX(100%);
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+        transition: transform 0.5s ease-in;
+        z-index: 2;
+    }
+
+    .nav-active {
+        transform: translateX(0%);
+    }
+
+    .burger {
+        display: block;
+    }
+    .cross .line1{
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+    .cross .line2{
+        opacity: 0;
+    }
+    .cross .line3{
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    /* ------------ MAIN */
+
+    #landing {
+        flex-direction: column;   
+    }
+
+    /* -- INTRODUCTION */
+    /* about me */
+    .group-box {
+        width: 95%;
+    }
+
+    /* groups 1 & 2 text up, image down */
+    .group1, .group2 {
+        flex-direction: column;
+    }
+
+    .group1 img, .group2 img {
+        margin: 25px 0 0 0;
+    }
+
+    /* -- SKILLS */
+    .skills-columns {
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+    }
+
+    .skill-category {
+        margin: 0 20px 30px 20px;
+    }
+
+    /* -- EXPERIENCE */
+    .jobs-resume th {
+        font-size: 14pt;
+        font-weight: 200;
+        /* letter-spacing: 3px; */
+    }
+    
+    .jobs-resume td {
+        /* letter-spacing: 2px; */
+        font-size: 13pt;
+    }
+}
