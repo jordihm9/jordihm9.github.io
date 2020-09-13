@@ -175,6 +175,7 @@ main {
 .dark-back {
     background-color: black;
     color: var(--smoke-white);
+    box-shadow: var(--black-blured-shadow);
 }
 
 .dark-back img {
@@ -210,8 +211,6 @@ main {
     font-size: 24pt;
     padding: 15px 0 0 0;
 }
-
-
 
 /* -- INTRODUCTION */
 .group-box {
@@ -296,6 +295,7 @@ main {
 
 .skill-category li {
     line-height: 2em;
+    font-size: 13pt;
 }
 
 /* -- EXPERIENCE */
