@@ -24,9 +24,9 @@ body {
 
 :root {
     --smoke-white: rgb(190, 190, 190);
+    --light-grey: rgb(143, 141, 141);
     --soft-black: rgb(53, 53, 53);
     --grey-blured: rgba(71,71,71,0.4);
-    /* --accent-color: rgb(235,137,68);*/ /* ORANGE*/ 
     --accent-color: rgb(110, 132, 95, 1); /* GREEN */
     --nav-height: 8vh;
     --black-blured-shadow: 3px 4px 12px 4px var(--soft-black);
@@ -298,35 +298,45 @@ main {
     font-size: 13pt;
 }
 
-/* -- EXPERIENCE */
-table.jobs-resume {
+/* -- BOTH TABLES */
+table {
     margin: auto;
-    width: 80%;
     text-align: center;
     vertical-align: middle;
+    
 }
 
-.jobs-resume tr { /* rows */
-    min-height: 2.5em;
+tr { /* rows */
+    height: 2.5em;
 }
 
-.jobs-resume tr:nth-child(even) { /* even rows */
-    background-color: var(--soft-black);
-}
-
-.jobs-resume th {
-    font-size: 17pt;
-    font-weight: 200;
-    letter-spacing: 3px;
-}
-
-.jobs-resume td {
+td {
     letter-spacing: 2px;
-    font-size: 15pt;
+    font-size: 13pt;
+    padding: 10px 0 10px 0;
+}
+
+/* -- EXPERIENCE */
+.jobs-resume {
+    width: 75%;
+}
+
+.jobs-resume tr:nth-child(odd) { /* even rows different styling */
+    background-color: var(--light-grey);
+    color: black;
+}
+
+/* -- CERTIFICATIONS */
+.cert-table {
+    width: 65%;
+}
+
+.cert-table tr:nth-child(odd) { /* odd rows different styling */
+    background-color: var(--light-grey);
 }
 
 @media screen and (max-width: 1024px) {
-    table.jobs-resume {
+    .jobs-resume, .cert-table {
         width: 100%;
     }
 }
@@ -458,7 +468,7 @@ footer .content {
     }
 
     /* -- EXPERIENCE */
-    
+
     /* --------------------------------------------------------------- RESPONSIVE TABLE */
     /* Force table to not be like tables anymore */
 	table, thead, tbody, th, td, tr { 
@@ -473,31 +483,8 @@ footer .content {
 	}
     
     tr {
-        border-bottom: 4px solid var(--smoke-white);
+        border-bottom: 4px solid transparent;
+        height: unset;
+        min-height: 2.5em;
     }
-
-	td {
-		/* Behave  like a "row" */
-        min-width: 4em;
-        position: relative;
-        padding: 10px 0 10px 50%;
-	}
-	
-	td:before { 
-        /* Now like a table header */
-		position: absolute;
-		/* Top/left values mimic padding */
-		top: 50%;
-		left: 6px;
-		width: 45%; 
-		padding-right: 10px; 
-        white-space: nowrap;
-        transform: translateY(-50%);
-    }
-    
-    /* Label 'headers' */
-	td:nth-of-type(1):before { content: "Period";}
-	td:nth-of-type(2):before { content: "Job"; }
-    td:nth-of-type(3):before { content: "Company"; }
-    /* --------------------------------------------------------------- RESPONSIVE TABLE */
 }
