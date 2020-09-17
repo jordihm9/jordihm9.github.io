@@ -24,13 +24,12 @@ body {
 
 :root {
     --smoke-white: rgb(190, 190, 190);
-    --light-grey: rgb(143, 141, 141);
-    --soft-black: rgb(53, 53, 53);
+    --soft-black: rgba(53, 53, 53, 0.8);
     --grey-blured: rgba(71,71,71,0.4);
     --accent-color: rgb(110, 132, 95, 1); /* GREEN */
-    --nav-height: 8vh;
-    --black-blured-shadow: 3px 4px 12px 4px var(--soft-black);
+    --black-blured-shadow: 3px 4px 12px 4px black;
     --white-blured-shadow: 1.5px 2px 12px 2px var(--smoke-white);
+    --nav-height: 8vh;
 }
 
 /* ------------ HEADER */
@@ -322,7 +321,7 @@ td {
 }
 
 .jobs-resume tr:nth-child(odd) { /* even rows different styling */
-    background-color: var(--light-grey);
+    background: var(--smoke-white);
     color: black;
 }
 
@@ -332,7 +331,8 @@ td {
 }
 
 .cert-table tr:nth-child(odd) { /* odd rows different styling */
-    background-color: var(--light-grey);
+    background: black;
+    color: white;
 }
 
 @media screen and (max-width: 1024px) {
