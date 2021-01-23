@@ -78,6 +78,7 @@ nav {
 
 .burger {
     display: none;
+    width: max-content;
     position: absolute;
     right: 5%;
     top: 50%;
@@ -105,6 +106,7 @@ main {
 
 #landing {
     margin: 20px 0 0 0;
+    height: 92vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -439,7 +441,8 @@ footer .content {
     /* ------------ MAIN */
 
     #landing {
-        flex-direction: column;   
+        height: unset;
+        flex-direction: column;
     }
 
     /* -- INTRODUCTION */
