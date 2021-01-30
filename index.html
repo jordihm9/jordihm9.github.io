@@ -14,47 +14,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- FONTS -->
     <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap"
-    rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap"
+        rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!-- JAVASCRIPT -->
-    <script src="javascript/app.js" defer></script>
+    <script src="javascript/jquery-3.5.1.js"></script>
+    <script src="javascript/app.js"></script>
 </head>
 
 <body>
     <!-- HEADER -->
     <header>
         <nav>
-            <div class="logo">
-                <h1>
-                    <a href="#landing">JHM</a>
-                </h1>
+            <div class="brand">
+                <a href="#landing">JHM</a>
             </div>
             <ul class="nav-links">
-                <li>
+                <li class="nav-link">
                     <a href="#about">About</a>
                 </li>
-                <li>
+                <li class="nav-link">
                     <a href="#skills">Skills</a>
                 </li>
-                <li>
+                <li class="nav-link">
                     <a href="#experience">Experience</a>
                 </li>
-                <li>
+                <li class="nav-link">
                     <a href="#certifications">Certifications</a>
                 </li>
-                <!-- <li>
-                    <a href="#projects">Projects</a>
-                </li>
-                <li>
-                    <a href="#contact">Contact</a>
-                </li> -->
             </ul>
             <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+                <div id="line1" class="line"></div>
+                <div id="line2" class="line"></div>
+                <div id="line3" class="line"></div>
             </div>
         </nav>
     </header>
@@ -63,16 +56,14 @@
 
         <!-- LANDING -->
         <section id="landing">
-            <div class="text-intro">
+            <div class="text">
                 <h1>Jordi Hernàndez</h1>
                 <h2>Web developer & Web designer.</h2>
                 <div class="button-box">
-                    <a href="#about" class="read-more">
-                        <button>Read more</button>
-                    </a>
+                    <a href="#about" class="read-more"><button>Read more</button></a>
                 </div>
             </div>
-            <div class="img-intro">
+            <div>
                 <img src="images/other/landing-portrait.jpg" alt="portrait of myself">
             </div>
         </section>
@@ -83,54 +74,35 @@
         <section id="about">
 
             <!-- introduction -->
-            <article id="introduction" class="dark-back">
-                <div class="title">
-                    <h1>About me</h1>
+            <article id="introduction" class="dark-bg">
+                <div class="header">
                     <img src="images/icons/simple-avatar.svg" alt="simple-avatar" class="icon">
+                    <h1>About me</h1>
                 </div>
-                <div class="group-box group1">
-                    <div class="text-article">
-                        <h1>
-                            Hi!
-                        </h1>
-                        <p>
-                            I am a
-                            <span id="age"></span>
-                            years old student on Web Application Development focused on
-                            building the best and beautiful websites.
-                            <br>
-                            Programming is my passion but I also love music, photography and motorbikes.
-                        </p>
-                    </div>
-                    <!-- <div class="img-article">
-                        <img src="images/other/yamaha_xenter-front.jpeg" alt="yamaha x-enter front light"
-                            style="max-width: 50%;">
-                    </div> -->
-                </div>
-                <div class="group-box group2">
-                    <div class="text-article">
-                        <p>
-                            When I was young I used to play guitar. Taking part as a member of a few bands and played
-                            live on
-                            some ocasional events where I learned teamwork.
-                        </p>
-                    </div>
-                    <!-- <div class="img-article">
-                        <img src="images/other/portrait-play-guitar.jpg" alt="portrait playing guitar"
-                            style="max-width: 80%;">
-                    </div> -->
+                <div class="content">
+                    <p>
+                        I am a <span id="age"></span> years old student on Web Application Development focused on
+                        building the best and beautiful websites.
+                        <br>
+                        Programming is my passion but I also love music, photography and motorbikes.
+                    </p>
+                    <p class="align-right">
+                        When I was young I used to play guitar. Taking part as a member of a few bands and played
+                        live on
+                        some ocasional events where I learned teamwork.
+                    </p>
                 </div>
             </article>
 
             <!-- skills -->
-            <article id="skills" class="light-back">
-                <div class="title">
-                    <h1>Skills</h1>
+            <article id="skills" class="light-bg">
+                <div class="header">
                     <img class="icon" src="images/icons/employee-skills.svg" alt="employee-skills">
+                    <h1>Skills</h1>
                 </div>
-                <div class="skills-columns">
+                <div class="content skills-columns">
                     <div class="skill-category">
-                        <h2>Languages</h2>
+                        <h3>Languages</h3>
                         <ul>
                             <li>HTML & CSS</li>
                             <li>JavaScript</li>
@@ -140,7 +112,7 @@
                         </ul>
                     </div>
                     <div class="skill-category">
-                        <h2>Frameworks & Libraries</h2>
+                        <h3>Frameworks & Libraries</h3>
                         <ul>
                             <li>Tailwind CSS</li>
                             <li>Laravel</li>
@@ -149,7 +121,7 @@
                         </ul>
                     </div>
                     <div class="skill-category">
-                        <h2>Tools</h2>
+                        <h3>Tools</h3>
                         <ul>
                             <li>Bash</li>
                             <li>CMD & Powershell</li>
@@ -158,7 +130,7 @@
                         </ul>
                     </div>
                     <div class="skill-category">
-                        <h2>Apps</h2>
+                        <h3>Apps</h3>
                         <ul>
                             <li>Word</li>
                             <li>Excel</li>
@@ -170,12 +142,12 @@
             </article>
 
             <!-- experience -->
-            <article id="experience" class="dark-back">
-                <div class="title">
-                    <h1>Experience</h1>
+            <article id="experience" class="dark-bg">
+                <div class="header">
                     <img src="images/icons/resume.svg" alt="resume" class="icon">
+                    <h1>Experience</h1>
                 </div>
-                <table class="jobs-resume">
+                <table class="content jobs-resume">
                     <tr>
                         <td>2019 <br> June - September</td>
                         <td>Bar waiter</td>
@@ -200,12 +172,12 @@
             </article>
 
             <!-- certifications -->
-            <article id="certifications" class="light-back">
-                <div class="title">
-                    <h1>Certifications</h1>
+            <article id="certifications" class="light-bg">
+                <div class="header">
                     <img src="images/icons/certificate.svg" alt="certificate" class="icon">
+                    <h1>Certifications</h1>
                 </div>
-                <table class="cert-table">
+                <table class="content cert-table">
                     <tr>
                         <td>MTA: Introduction to Programming using HTML and CSS</td>
                         <td>2020</td>
@@ -228,9 +200,9 @@
 
         <!-- projects -->
         <section id="projects">
-            <div class="title">
-                <h1>Projects</h1>
+            <div class="header">
                 <img src="images/icons/job-portfolio.svg" alt="job-portfolio" class="icon">
+                <h1>Projects</h1>
             </div>
             <div id="projects-grid">
                 <div class="project">
@@ -252,7 +224,7 @@
 
         <!-- contact -->
         <section id="contact">
-            <div class="title">
+            <div class="header">
                 <h1>Contact</h1>
                 <img src="images/icons/deal.svg" alt="deal" class="icon">
             </div>

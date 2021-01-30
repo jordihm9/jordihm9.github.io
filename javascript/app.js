@@ -1,64 +1,55 @@
 'use strict'
-const burger = document.querySelector('.burger');
-const logoLink = document.querySelector('.logo a');
-const readMore = document.querySelector('.read-more');
 
-const slideNav = () => {
-    const navLinks = document.querySelector('.nav-links');
+/**
+ * Activate or deactivate burger menu
+ */
+function slideNav() {
     // slide nav links
-    navLinks.classList.toggle('nav-active');
-    // burger animation to cross
-    burger.classList.toggle('cross');
+    $('.nav-links').toggleClass('active');
+    // switch from 3 lines to cross
+    $('.burger').toggleClass('cross');
 };
 
-const smoothScroll = (element, error) => {
-    let href = element.getAttribute('href');
-    let target = document.querySelector(href);
-    console.log(href, target);
-    target.scrollIntoView({ behavior: 'smooth', block: 'start', inline: "nearest" });
-    history.pushState(null, null, href);
-    error.preventDefault();
-}
-
-const linkPressed = () => {
-    const navLink = document.querySelectorAll('.nav-links a');
-
-    for (let link of navLink) {
-        link.addEventListener('click', (error) => {
-            slideNav(); // close side nav
-            smoothScroll(link, error); // scroll to section selected
-        });
-    }
-}
-
-/* calculate age and update it */
-const updateAge = () => {
-    const ageField = document.querySelector("#age");
-
-    const dateOfBirth = new Date("9/5/2001");
+/**
+ * Auto calculate the age
+ * Update the value in the document
+ */
+function calcAge() {
+    const birth = new Date("2001-05-09");
     const today = new Date();
 
-    let age = today.getFullYear() - dateOfBirth.getFullYear();
-    let m = today.getMonth() - dateOfBirth.getMonth();
-    if (m < 0 || (m === 0 && today.getDate() < dateOfBirth.getDate())) {
-        age = age - 1;
+    // difference between years
+    let age = today.getFullYear() - birth.getFullYear();
+    // difference between months
+    let m = today.getMonth() - birth.getMonth();
+    // substract -1 if the date of today is before the date and month of birth
+    if (m < 0 || (m === 0 && today.getDate() < birth.getDate())) {
+        age--;
     }
 
-    ageField.innerHTML = age.toString();
+    $('#age').text(age);
 }
 
-const app = function () {
+function init() {
+    calcAge();
 
-    burger.addEventListener('click', () => {
-        slideNav();
+    $('.burger').click(slideNav);
+
+    // scroll effect when a link is clicked
+    $('a').click(function (e) {
+        e.preventDefault();
+        var dest = 0;
+        //calculate destination place
+        if ($(this.hash).offset().top > $(document).height() - $(window).height()) {
+            dest = $(document).height() - $(window).height();
+        } else {
+            dest = $(this.hash).offset().top;
+        }
+        //go to destination
+        $('html,body').animate({
+            scrollTop: dest
+        }, 1000);
     });
-
-    linkPressed();
-
-    logoLink.addEventListener('click', (error) => {smoothScroll(logoLink, error)});
-    readMore.addEventListener('click', (error) => {smoothScroll(readMore, error)});
-
-    updateAge();
 }
 
-app();
+$(document).ready(init);
