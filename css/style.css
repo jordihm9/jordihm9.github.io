@@ -20,7 +20,7 @@ button {
 button {
     margin: 1em;
     padding: 1em 1.5em;
-    border-radius: 6px;
+    border-radius: .5rem;
     background-color: var(--accent-color);
     color: white;
     font-size: 1em;
@@ -34,7 +34,7 @@ button {
 
 button:hover,
 button:focus {
-    background-color: var(--soft-black);
+    filter: brightness(1.15);
     outline: none;
 }
 
@@ -76,7 +76,7 @@ nav {
 }
 
 .nav-links {
-    padding: 20px;
+    padding: 1em;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -157,17 +157,18 @@ main {
     margin-left: 2.5rem;
     height: 550px;
     box-shadow: var(--black-blured-shadow);
-    animation: drop 1.25s ease-in-out 500ms 1 normal;
-    -ms-animation: drop 1.25s ease-in-out 500ms 1 normal;
-    -moz-animation: drop 1.25s ease-in-out 500ms 1 normal;
+    animation: drop 500ms 750ms ease-in forwards;
+    -ms-animation: drop 500ms 500ms ease-in forwards;
+    -moz-animation: drop 500ms 500ms ease-in forwards;
+    opacity: 0;
 }
 
 @keyframes drop {
     from {
         opacity: 0;
-        transform: translateY(-30px);
-        -ms-transform: translateY(-30px);
-        -moz-transform: translateY(-30px);
+        transform: translateY(-1.15rem);
+        -ms-transform: translateY(-1.15rem);
+        -moz-transform: translateY(-1.15rem);
     }
     to {
         opacity: 1;
