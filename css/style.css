@@ -247,6 +247,10 @@ article > .header .icon {
 .content h3 {font-size: 1.2em;}
 
 .content {
+    margin: auto;
+    width: fit-content;
+    width: -moz-fit-content;
+    width: -ms-fit-content;
     font-size: 1.2em;
     letter-spacing: 1px;
     word-spacing: 4px;
@@ -254,6 +258,7 @@ article > .header .icon {
 }
 
 .content p {
+    max-width: 85ch;
     margin-bottom: 1rem;
 }
 
