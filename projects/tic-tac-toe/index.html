@@ -16,59 +16,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
     <!-- link to fonts stylesheet -->
     <link rel="stylesheet" href="../../css/fonts.css">
-    <!-- link to language seleccion div stylesheet -->
-    <link rel="stylesheet" href="../../css/lang_selecction.css">
     <!-- link to tic tac toe stylesheet -->
     <link rel="stylesheet" href="style.css">
+
+    <script src="/javascript/jquery-3.5.1.js"></script>
+    <script src="tic-tac-toe.js" defer></script>
 </head>
 
 <body>
     <main>
         <section id="title">
-            <h1>
-                Tic Tac Toe
-            </h1>
+            <h1>Tic Tac Toe</h1>
         </section>
         <section id="game">
-            <div id="board">
-                <div class="cell" onclick="play('1')">
-                    <div id="1" class="piece"></div>
-                </div>
-                <div class="cell" onclick="play('2')">
-                    <div id="2" class="piece"></div>
-                </div>
-                <div class="cell" onclick="play('3')">
-                    <div id="3" class="piece"></div>
-                </div>
-                <div class="cell" onclick="play('4')">
-                    <div id="4" class="piece"></div>
-                </div>
-                <div class="cell" onclick="play('5')">
-                    <div id="5" class="piece"></div>
-                </div>
-                <div class="cell" onclick="play('6')">
-                    <div id="6" class="piece"></div>
-                </div>
-                <div class="cell" onclick="play('7')">
-                    <div id="7" class="piece"></div>
-                </div>
-                <div class="cell" onclick="play('8')">
-                    <div id="8" class="piece"></div>
-                </div>
-                <div class="cell" onclick="play('9')">
-                    <div id="9" class="piece"></div>
-                </div>
-            </div>
-            <div id="winPopUp" >
-                <div id="winnerPiece"></div>
+            <div id="board"></div>
+            <div class="popup">
+                <div class="text"></div>
+                <a id="play-again">Play again</a>
             </div>
         </section>
-        <div id="playAgain" onclick="cleanBoard()">
-                &olarr;
-        </div>
     </main>
 </body>
-
-<script type="text/javascript" src="index.js"></script>
 
 </html>
