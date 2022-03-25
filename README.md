@@ -1,3 +1,4 @@
-# MY PORTFOLIO (CV)
+# My Portfolio :rocket:
 
-This repository is for my personal portfolio. A web page CV, where my abilities as web developer are reflected.
+Check it out here: [jordihm9.github.io]( https://jordihm9.github.io )
+
