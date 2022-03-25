@@ -1,4 +1,3 @@
-# My Portfolio :rocket:
+# My Portfolio! :rocket:
 
-Check it out here: [jordihm9.github.io]( https://jordihm9.github.io )
-
+> [jordihm9.github.io](https://jordihm9.github.io)
