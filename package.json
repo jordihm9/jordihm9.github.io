@@ -5,10 +5,13 @@
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0"
+    "react-scripts": "5.0.0",
+    "sass": "^1.49.9"
   },
   "scripts": {
     "start": "react-scripts start",
+    "sass": "sass src/css/sass/main.scss:src/css/styles.css",
+    "watch-sass": "sass --watch src/css/sass/main.scss:src/css/styles.css",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
