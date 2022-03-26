@@ -2,8 +2,18 @@ version: '3.9'
 services:
   web:
     build: .
-    container_name: jordihm9_github_pages
+    container_name: jordihm9_web
     volumes:
       - ./:/local
     ports:
       - 3000:3000
+    depends_on:
+      - sass-compiler
+
+  sass-compiler:
+    build:
+      dockerfile: Dockerfile.sass
+    container_name: jordihm9_sass-compiler
+    volumes:
+      - ./src/css:/local/src/css
+

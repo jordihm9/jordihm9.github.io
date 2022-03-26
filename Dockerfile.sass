@@ -1,0 +1,7 @@
+FROM node:16.14.0-alpine
+WORKDIR /local
+RUN yarn global add sass@1.49.9
+COPY src/css/* ./src/css
+# need to copy the package.json to execute the custom script
+COPY package.json .
+CMD yarn watch-sass
