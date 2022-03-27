@@ -1,6 +1,8 @@
 import { Header } from './components/header';
 import { Main } from './components/main';
 
+import { useLocation } from './hooks/useLocation';
+
 import './css/styles.css';
 
 const navItems = [
@@ -27,9 +29,11 @@ const navItems = [
 ];
 
 export const App = () => {
+  const location = useLocation();
+
   return (
     <>
-      <Header navItems={navItems} />
+      <Header location={location} navItems={navItems} />
       <Main />
     </>
   );

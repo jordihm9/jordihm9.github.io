@@ -1,9 +1,9 @@
 import { Nav } from './nav';
 
-export const Header = ({ navItems }) => {
+export const Header = ({ location, navItems }) => {
   return (
     <header>
-      <Nav navItems={navItems} />
+      <Nav navItems={navItems} locationSlug={location} />
     </header>
   )
 };

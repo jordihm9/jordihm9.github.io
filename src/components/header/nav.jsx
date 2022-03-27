@@ -2,10 +2,10 @@ import { useState } from 'react';
 
 import { NavItem } from './nav_item';
 
-export const Nav = ({ navItems }) => {
-  const [activeItem, setActiveItem] = useState(null);
+export const Nav = ({ locationSlug, navItems }) => {
+  const [currentPage, setCurrentPage] = useState(locationSlug);
 
-  const changeActiveItem = (item) => setActiveItem(item);
+  const changeActiveItem = (slug) => setCurrentPage(slug);
 
   return (
     <nav>
@@ -14,7 +14,7 @@ export const Nav = ({ navItems }) => {
           return !item.disabled ? (
             <NavItem
               key={item.slug}
-              active={item.slug === activeItem?.slug}
+              active={item.slug === currentPage}
               item={item}
               onClick={changeActiveItem}
             />

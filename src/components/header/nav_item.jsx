@@ -1,9 +1,7 @@
 export const NavItem = ({
-  active,
-  item,
-  onClick,
+  active, item, onClick,
 }) => {
-  const clickHandler = () => onClick(item);
+  const clickHandler = () => onClick(item.slug);
 
   return (
     <li className={active ? 'active' : ''}>
