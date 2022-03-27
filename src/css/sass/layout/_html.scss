@@ -1,0 +1,11 @@
+html {
+  height: 100vh;
+  background-color: var(--clr-white-100);
+  font-family: 'Montserrat', sans-serif;
+}
+
+#root {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
